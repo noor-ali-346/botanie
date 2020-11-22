@@ -53,19 +53,19 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 Hi {}, my name is {}! 
 I am an Anime themed group management bot.
-Build by weebs for weebs, I specialize in managing anime and similar themed groups.
-You can find my list of available commands with /help.
+I am an Amazing group management bot.
+Made With ❤ I specialize in managing your group with my advance features.
+You can find my list of available commands with /help..
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a Hero For Fun and help admins manage their groups with Aniebot Have a look at the following for an idea of some of \
-the things I can help you with.
+I am a group management bot, here to help you get around and keep the order in your groups!
 
 *Main* commands available:
+ • /start: start the bot
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
@@ -77,7 +77,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/93f78c7f300c3d817ec16.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/061737b2def29b8e619cf.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
@@ -189,26 +189,26 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="🤖Add Me To Your Group",
+                            text=" Add Asuna To Your Group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
-                             text="🔄Support Group",
-                             url=f"https://t.me/anie_support"),
+                             text="Support Group",
+                             url=f"https://t.me/joinchat/AAAAAFFaSaAhlf5-Dg_GSA"),
                          InlineKeyboardButton(
-                             text="🔄Updates Channel",
-                             url="https://t.me/anie_news")
+                             text="logs Channel",
+                             url="https://t.me/eagleslogs")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="📖Getting started guide",
-                             url="https://t.me/anie_news/5")
+                             text=" Getting started guide",
+                             url="https://t.me/eaglejusticeassociation")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="☑️source code",
+                             text="source code",
                              url="https://github.com/shiwa786/botanie")
                      ]]))
     else:

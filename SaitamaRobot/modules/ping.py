@@ -2,12 +2,10 @@ import time
 from typing import List
 
 import requests
+from SaitamaRobot import StartTime, dispatcher
+from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
-
-from SaitamaRobot import StartTime, dispatcher
-from SaitamaRobot.modules.helper_funcs.chat_status import sudo_plus
-from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
     "Telegram": "https://api.telegram.org",
@@ -69,25 +67,19 @@ def ping_func(to_ping: List[str]) -> List[str]:
 
 
 @run_async
-@sudo_plus
 def ping(update: Update, context: CallbackContext):
-    msg = update.effective_message
-
-    start_time = time.time()
-    message = msg.reply_text("Pinging...")
-    end_time = time.time()
-    telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
+    telegram_ping = ping_func(["Telegram"])[0].split(": ", 1)[1]
     uptime = get_readable_time((time.time() - StartTime))
 
-    message.edit_text(
-        "PONG!!\n"
-        "<b>Time Taken:</b> <code>{}</code>\n"
-        "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
-        parse_mode=ParseMode.HTML)
+    reply_msg = ("PONG!!\n"
+                 "<b>Time Taken:</b> <code>{}</code>\n"
+                 "<b>Service uptime:</b> <code>{}</code>".format(
+                     telegram_ping, uptime))
+
+    update.effective_message.reply_text(reply_msg, parse_mode=ParseMode.HTML)
 
 
 @run_async
-@sudo_plus
 def pingall(update: Update, context: CallbackContext):
     to_ping = ["Kaizoku", "Kayo", "Telegram", "Jikan"]
     pinged_list = ping_func(to_ping)
@@ -102,11 +94,17 @@ def pingall(update: Update, context: CallbackContext):
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 
+__help__ = """
+ • `/ping`*:* get ping time of bot to telegram server
+ • `/pingall`*:* get all listed ping time
+"""
+
 PING_HANDLER = DisableAbleCommandHandler("ping", ping)
 PINGALL_HANDLER = DisableAbleCommandHandler("pingall", pingall)
 
 dispatcher.add_handler(PING_HANDLER)
 dispatcher.add_handler(PINGALL_HANDLER)
 
+__mod_name__ = "Ping"
 __command_list__ = ["ping", "pingall"]
 __handlers__ = [PING_HANDLER, PINGALL_HANDLER]

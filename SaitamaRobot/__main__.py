@@ -212,10 +212,7 @@ def start(update: Update, context: CallbackContext):
                              url="https://github.com/noor-ali-346/botanie")
                      ]]))
     else:
-        update.effective_message.reply_text(
-            "Is there anything I can help? 😊),
-            parse_mode=ParseMode.HTML)
-
+        update.effective_message.reply_text ("Is there anything I can help? 😊")
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):

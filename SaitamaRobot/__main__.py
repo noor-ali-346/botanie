@@ -208,8 +208,8 @@ def start(update: Update, context: CallbackContext):
                      ],
                      [
                          InlineKeyboardButton(
-                             text="source code",
-                             url="https://github.com/shiwa786/botanie")
+                             text="Source Code (Licensed under GPLv3)",
+                             url="https://github.com/noor-ali-346/botanie")
                      ]]))
     else:
         update.effective_message.reply_text(

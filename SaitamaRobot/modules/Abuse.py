@@ -3,6 +3,8 @@ from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
+
+
 @run_async   
 def abuse(update, context):
     reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text

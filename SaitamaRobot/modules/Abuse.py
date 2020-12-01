@@ -3,40 +3,22 @@ from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
-
-@run_async
-def shout(update: Update, context: CallbackContext):
-    args = context.args
-    text = " ".join(args)
-    result = []
-    result.append(' '.join([s for s in text]))
-    for pos, symbol in enumerate(text[1:]):
-        result.append(symbol + ' ' + '  ' * pos + symbol)
-    result = list("\n".join(result))
-    result[0] = text[0]
-    result = "".join(result)
-    msg = "\n" + result + ""
-    return update.effective_message.reply_text(msg, parse_mode="MARKDOWN")
+@run_async   
+def abuse(update, context):
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text(random.choice(fun_strings.ABUSE_STRINGS))
 
 
 help = """
  A little piece of fun wording! Give a loud shout out in the chatroom.
  
- i.e /shout HELP, bot replies with huge coded *HELP* letters within the square. 
- 
- • /shout <keyword>*:* write anything you want to give loud shout.
+ • /abuse bad people
     
-    t e s t
-    e e
-    s   s
-    t     t
-    
-"""
 
-SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
+ABUSE_HANDLER = DisableAbleCommandHandler(["abuse", "gaali"], abuse, admin_ok=True)
 
-dispatcher.add_handler(SHOUT_HANDLER)
+dispatcher.add_handler(ABUSE_HANDLER)
 
-mod_name = "Shout"
-command_list = ["shout"]
-handlers = [SHOUT_HANDLER]
+mod_name = "abuse"
+command_list = ["abuse"]
+handlers = [ABAUSE_HANDLER]

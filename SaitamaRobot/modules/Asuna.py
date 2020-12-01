@@ -16,11 +16,11 @@ from telegram import MessageEntity
 from telegram.ext import Filters, MessageHandler,  CommandHandler, run_async
 from telegram.utils.helpers import mention_html, escape_markdown
 
-from lucifer import dispatcher, SUDO_USERS, SUPPORT_USERS, LOGGER, SUPPORT_CHAT
-from lucifer.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler, DisableAbleMessageHandler
-from lucifer.modules.helper_funcs.extraction import extract_user
-import lucifer.modules.helper_funcs.memes_strings as memes_strings
-import lucifer.modules.helper_funcs.fun_strings as fun_strings
+from SaitamaRobot import dispatcher, SUDO_USERS, SUPPORT_USERS, LOGGER, SUPPORT_CHAT
+from SaitamaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler, DisableAbleMessageHandler
+from SaitamaRobot.modules.helper_funcs.extraction import extract_user
+import SaitamaRobot.modules.helper_funcs.memes_strings as memes_strings
+import SaitamaRobot.modules.helper_funcs.fun_strings as fun_strings
 
 @run_async
 def gandhitext(update, context):
@@ -639,7 +639,7 @@ Some dank memes for fun or whatever!
 Some other regex filters are:
 `me too` | `goodmorning` | `goodnight`.
 
-Lucifer will reply random strings accordingly when these words are used!
+SaitamaRobot will reply random strings accordingly when these words are used!
 All regex filters can be disabled incase u don't want... like: `/disable metoo`.
 """
 

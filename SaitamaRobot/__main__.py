@@ -196,7 +196,7 @@ def start(update: Update, context: CallbackContext):
                      [
                          InlineKeyboardButton(
                              text="Support Group",
-                             url=f"https://t.me/joinchat/AAAAAFFaSaAhlf5-Dg_GSA"),
+                             url=f"https://t.me/eaglejusticeassociation"),
                          InlineKeyboardButton(
                              text="logs Channel",
                              url="https://t.me/eagleslogs")

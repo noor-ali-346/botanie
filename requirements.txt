@@ -31,4 +31,4 @@ pyrate-limiter
 gtts
 tswift
 fontTools
-REDIS
+redis

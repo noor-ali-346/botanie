@@ -31,3 +31,4 @@ pyrate-limiter
 gtts
 tswift
 fontTools
+pySmartDL

@@ -4,9 +4,9 @@ import zipfile
 from pySmartDL import SmartDL
 import time
 import os
-from Elizabeth.events import register
-from Elizabeth import TEMP_DOWNLOAD_DIRECTORY
-from Elizabeth import LOGGER, client
+from SaitamaRobot.events import register
+from SaitamaRobot import TEMP_DOWNLOAD_DIRECTORY
+from SaitamaRobot import LOGGER, client
 from telethon import types
 from telethon.tl import functions
 

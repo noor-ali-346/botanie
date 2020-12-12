@@ -1,4 +1,4 @@
-future
+Ifuture
 emoji
 lxml
 beautifulsoup4
@@ -31,4 +31,3 @@ pyrate-limiter
 gtts
 tswift
 fontTools
-pySmartDL

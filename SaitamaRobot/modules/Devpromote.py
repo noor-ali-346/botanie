@@ -8,10 +8,10 @@ from telegram import Bot, Update, ParseMode, TelegramError
 from telegram.ext import CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-from tg_bot import dispatcher, WHITELIST_USERS, SUPPORT_USERS, SUDO_USERS, DEV_USERS, OWNER_ID
-from tg_bot.modules.helper_funcs.chat_status import whitelist_plus, dev_plus
-from tg_bot.modules.helper_funcs.extraction import extract_user
-from tg_bot.modules.log_channel import gloggable
+from SaitamaRobot import dispatcher, WHITELIST_USERS, SUPPORT_USERS, SUDO_USERS, DEV_USERS, OWNER_ID
+from SaitamaRobot.modules.helper_funcs.chat_status import whitelist_plus, dev_plus
+from SaitamaRobot.modules.helper_funcs.extraction import extract_user
+from SaitamaRobot.modules.log_channel import gloggable
 
 ELEVATED_USERS_FILE = os.path.join(os.getcwd(), 'tg_bot/elevated_users.json')
 

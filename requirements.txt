@@ -1,4 +1,4 @@
-Ifuture
+future
 emoji
 lxml
 beautifulsoup4

@@ -19,12 +19,12 @@ def feedback(bot: Bot, update: Update):
   feed_text = f" SaitamaRobot *New* feedback from [{name}](tg://user?id={userid})\n\nfeed: {text}"
   
 
-  bot.send_message(-1001321926428, feed_text, parse_mode=ParseMode.MARKDOWN)
+  bot.send_message(-1001269560084, feed_text, parse_mode=ParseMode.MARKDOWN)
  
   text = html.escape(text)
   reply_text=f"Thankyou for giving us your feedback."
   message.reply_text(reply_text, reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="You can see your feedback here",url="https://t.me/fateunion")]]))
+                                                [[InlineKeyboardButton(text="You can see your feedback here",url="https://t.me/eaglejusticeassociation")]]))
                                                
   
 

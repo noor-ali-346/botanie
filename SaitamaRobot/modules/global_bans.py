@@ -139,8 +139,7 @@ def gban(update: Update, context: CallbackContext):
 
         return
 
-    message.reply_text("Okay!
-One gban coming right up for {first_name}")
+    message.reply_text("On it!")
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
@@ -229,9 +228,9 @@ One gban coming right up for {first_name}")
 
     if gban_time > 60:
         gban_time = round((gban_time / 60), 2)
-        message.reply_text("Done! This gban affected {chat_affected} Took me {gban_time} sec.", parse_mode=ParseMode.HTML)
+        message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
     else:
-        message.reply_text("Done! This gban affected {chat_affected} Took me {gban_time} sec.", parse_mode=ParseMode.HTML)
+        message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
 
     try:
         bot.send_message(

@@ -31,3 +31,7 @@ pyrate-limiter
 gtts
 tswift
 fontTools
+youtube_dl
+validators
+pySmartDL
+pybase64

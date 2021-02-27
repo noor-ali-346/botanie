@@ -77,8 +77,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/f4b35ad2d1b79ffda363e.jpg"
-
+SAITAMA_IMG = https://t.me/EnternalsFriends/225373
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Paul
@@ -189,22 +188,22 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text=" Add Asuna To Your Group",
+                            text=" Add pain To Your Group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
                      [
                          InlineKeyboardButton(
                              text="Support Group",
-                             url=f"https://t.me/eaglejusticeassociation"),
+                             url=f"https://t.me/Subaru_Akehoshi_botsupport"),
                          InlineKeyboardButton(
                              text="logs Channel",
-                             url="https://t.me/eagleslogs")
+                             url="https://t.me/Gbanlogsofsubaru")
                      ],
                      [
                          InlineKeyboardButton(
                              text=" Getting started guide",
-                             url="https://t.me/eaglejusticeassociation")
+                             url="https://t.me/Subaru_Akehoshi_botsupport")
                      ],
                      [
                          InlineKeyboardButton(
@@ -473,7 +472,7 @@ def donate(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True)
 
-        if OWNER_ID != 254318997 and DONATION_LINK:
+        if OWNER_ID != 1162174693 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
